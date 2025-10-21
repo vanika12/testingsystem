@@ -1,0 +1,215 @@
+.find-journal {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.find-journal-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.find-journal-header h1 {
+  font-size: 2rem;
+  color: #0a2463;
+  margin-bottom: 0.5rem;
+}
+
+.find-journal-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.find-journal-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.journal-form {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #0a2463;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #0a2463;
+  box-shadow: 0 0 0 3px rgba(10, 36, 99, 0.1);
+}
+
+.submit-btn {
+  padding: 0.75rem 1.5rem;
+  background: #0a2463;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #051a3f;
+  box-shadow: 0 4px 12px rgba(10, 36, 99, 0.2);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.suggestion-result {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+}
+
+.suggestion-result h3 {
+  color: #0a2463;
+  margin-bottom: 1rem;
+}
+
+.journal-card {
+  background: #f5f9ff;
+  border-left: 4px solid #0a2463;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.journal-card.confidence-high {
+  border-left-color: #28a745;
+}
+
+.journal-card.confidence-medium {
+  border-left-color: #ffc107;
+}
+
+.journal-card.confidence-low {
+  border-left-color: #dc3545;
+}
+
+.confidence-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  background: #0a2463;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.journal-card h4 {
+  color: #0a2463;
+  margin-bottom: 0.5rem;
+}
+
+.journal-abbr {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.journal-desc {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.reason {
+  color: #0a2463;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.journals-list {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+}
+
+.journals-list h3 {
+  color: #0a2463;
+  margin-bottom: 1.5rem;
+}
+
+.all-journals {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.journal-item {
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 3px solid #0a2463;
+}
+
+.journal-item h4 {
+  color: #0a2463;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.journal-item .abbr {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.journal-item p {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .find-journal-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .find-journal {
+    padding: 1rem;
+  }
+
+  .find-journal-header h1 {
+    font-size: 1.5rem;
+  }
+}
