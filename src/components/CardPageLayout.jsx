@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import PetQuestions from "./PetQuestions"
-import ChatPanel from "./ChatPanel"
+import ChatPanel from "../../backend/ChatPanel"
 import "./CardPageLayout.css"
 
 function CardPageLayout({ title, questions }) {
