@@ -51,7 +51,7 @@ function Header() {
     { label: "Home", path: "/" },
     { label: "AboutUs", path: "/about-us" },
     { label: "Services", path: "/services" },
-    { label: "Contact", path: "/support" },
+    { label: "Contact", path: "/help" },
   ];
 
   return (

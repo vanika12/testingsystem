@@ -15,7 +15,7 @@ function Home() {
     { title: "Jobs", path: "/jobs", icon: "💼" },
     { title: "Open Journal System", path: "/ojs", icon: "📰" },
     { title: "About Us", path: "/about-us", icon: "ℹ️" },
-    { title: "Support", path: "/support", icon: "🆘" },
+    { title: "support", path: "/help", icon: "🆘" },
   ];
 
   const filteredCards = cards.filter((card) =>

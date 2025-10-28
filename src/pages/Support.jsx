@@ -31,7 +31,7 @@ function Support() {
     setLoading(true)
 
     try {
-      const response = await fetch("/api/support", {
+      const response = await fetch("/api/help", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

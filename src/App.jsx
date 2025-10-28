@@ -17,7 +17,7 @@ import "./App.css"
 
 function App() {
   return (
-    <Router>
+    <Router basename="/support">
         <ScrollToTop/>
       <div className="app-container">
         <Header />
@@ -33,7 +33,7 @@ function App() {
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/ojs" element={<OJS />} />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/support" element={<Support />} />
+            <Route path="/help" element={<Support />} />
           </Routes>
         </main>
       </div>
