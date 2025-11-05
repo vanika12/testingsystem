@@ -1,43 +1,4 @@
-/* .header {
-  background-color: #0a2463;
-  color: white;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
 
-.header-content {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.brand:hover {
-  color: #a8d8ff;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.help-text {
-  font-size: 0.9rem;
-  color: #a8d8ff;
-} */
 .header {
   background: linear-gradient(135deg, #0a2463 0%, #1e3a8a 100%);
   color: white;
@@ -308,4 +269,27 @@
   .nav-link {
     font-size: 1rem;
   }
+}
+/* ✅ Prevent header from blocking clicks below it when menu is closed */
+.nav-list {
+  pointer-events: none; /* disable interaction when hidden */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-list.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* enable interaction when open */
+}
+
+/* ✅ Make sure header sits above only when needed */
+.header {
+  z-index: 10; /* not too high to block other UI like chatbot modals */
+}
+
+/* ✅ Ensure tooltip doesn't expand click area invisibly */
+.tooltip {
+  pointer-events: none;
 }

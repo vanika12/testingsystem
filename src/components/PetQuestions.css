@@ -6,6 +6,95 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 4;
+}
+
+.pet-questions h3 {
+  color: #0a2463;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.25rem; /* avoid scrollbar overlap */
+  scroll-behavior: smooth;
+}
+
+.question-btn {
+  background: #f5f9ff;
+  border: 1px solid #d0e0ff;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #0a2463;
+  transition: all 0.3s ease;
+  line-height: 1.4;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.question-btn:hover {
+  background: #e8f0ff;
+  border-color: #0a2463;
+  box-shadow: 0 2px 8px rgba(10, 36, 99, 0.1);
+}
+
+.question-btn:active {
+  transform: scale(0.98);
+}
+
+/* ============================= */
+/* 📱 Mobile Optimization Fixes  */
+/* ============================= */
+@media (max-width: 768px) {
+  .pet-questions {
+    height: auto;               /* allow flexible stacking */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+
+  .pet-questions h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .questions-list {
+    flex: none;                 /* prevent forced stretch */
+    overflow-y: visible;        /* remove inner scroll */
+    gap: 0.6rem;
+  }
+
+  .question-btn {
+    font-size: 0.9rem;
+    padding: 0.9rem 1rem;
+    width: 100%;
+    min-height: 48px;           /* better tap area */
+  }
+
+  .question-btn:active {
+    transform: scale(0.97);
+  }
+}
+
+
+
+/* .pet-questions {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .pet-questions h3 {
@@ -49,4 +138,4 @@
   .pet-questions {
     margin-bottom: 1rem;
   }
-}
+} */

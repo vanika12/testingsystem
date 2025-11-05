@@ -2,6 +2,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
+  overflow-x: hidden;
 }
 
 .support-header {
@@ -88,6 +89,9 @@
   font-size: 0.9rem;
   transition: border-color 0.3s ease;
 }
+input, textarea {
+  font-size: 16px; /* prevents zooming */
+}
 
 .form-group input:focus,
 .form-group textarea:focus {
@@ -138,7 +142,13 @@
 }
 
 .support-right {
-  min-height: 500px;
+ min-height: 400px;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .support-right {
+    min-height: 300px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -154,5 +164,25 @@
 
   .support-header h1 {
     font-size: 1.5rem;
+  }
+}
+/* // added css  */
+@media (max-width: 600px) {
+  .contact-form-section, .questions-section {
+    padding: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .quick-q {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
   }
 }

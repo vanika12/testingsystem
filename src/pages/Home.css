@@ -1,10 +1,14 @@
 
- .home {
+/* ✅ Base layout fix */
+.home {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0;
-} 
-/*
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ✅ Hero section */
 .hero {
   background: linear-gradient(135deg, #0a2463 0%, #1e3a8a 50%, #a8d8ff 100%);
   color: white;
@@ -14,38 +18,160 @@
   overflow: hidden;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>') repeat;
-  animation: subtleFloat 20s ease-in-out infinite;
-}
-
-@keyframes subtleFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
 .hero-overlay {
   position: relative;
   z-index: 2;
-  animation: fadeInUp 1s ease-out;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.search-container {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* ✅ Cards layout */
+.cards-section {
+  padding: 3rem 1.5rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a2463;
+  line-height: 1.4;
+}
+
+/* ✅ MOBILE FIRST */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2.5rem 1rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
   }
-} */
+
+  .hero-subtitle {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .search-input {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .cards-section {
+    padding: 2rem 1rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+
+  .card-icon {
+    font-size: 2.2rem;
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+  }
+}
+
+/* ✅ EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .search-input {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .cards-section {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .card {
+    padding: 1.2rem 0.8rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
+/* 
+ .home {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+} 
 
 
 .hero {
@@ -210,6 +336,7 @@
 }
 
 /* Responsive Design */
+/*
 @media (max-width: 768px) {
   .hero {
     padding: 3rem 1rem;
@@ -259,7 +386,7 @@
   .card {
     padding: 1.5rem 1rem;
   }
-}
+} */
 
 
 /* .home {

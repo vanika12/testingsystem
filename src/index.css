@@ -113,3 +113,58 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #051a3f;
 }
+ /* new css added  */
+
+ /* ===================== */
+/* 📱 Responsive Fixes for Small Devices */
+/* ===================== */
+
+@media (max-width: 768px) {
+  html, body, #root, .app-container {
+    width: 100%;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+
+  .main-content {
+    padding: 0 10px; /* gentle padding for mobile */
+  }
+
+  /* Common fix for overlapping tap areas */
+  button, a, [role="button"] {
+    min-height: 40px;
+    min-width: 40px;
+    touch-action: manipulation;
+  }
+
+  /* If header or nav is fixed, make sure it doesn’t cover content */
+  header, .navbar {
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Prevent overlays or pseudo elements from blocking taps */
+  .overlay, .modal-overlay, .backdrop {
+    pointer-events: none;
+  }
+
+  /* Fix stacking issues where chat or floating button may be hidden */
+  .support-widget, .chatbot, .chat-button {
+    position: fixed !important;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999; /* always on top */
+  }
+
+  /* Adjust large text or buttons that overflow */
+  .btn, .button {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  /* Make cards and sections fluid */
+  .card, .container, .section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
